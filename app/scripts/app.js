@@ -33,3 +33,6 @@ angular
 
       $locationProvider.html5Mode(true);
   });
+
+  window.APP = {};
+  window.APP.isMobileView = false;

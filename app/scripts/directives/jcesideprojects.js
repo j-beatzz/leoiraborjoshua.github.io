@@ -7,7 +7,7 @@
  * # jceSideProjects
  */
 angular.module('jcedevelopApp')
-  .directive('jceSideProjects', function ($timeout) {
+  .directive('jceSideProjects', function ($timeout, AppManager) {
     return {
       templateUrl: 'views/jcesideprojects.html',
       restrict: 'E',
@@ -30,14 +30,20 @@ angular.module('jcedevelopApp')
         }
 
         function showProjects(){
-        	$timeout(function(){
-        		var projectsContainer = element.find('.side-projects-container');
-        		var row = projectsContainer.find('.row');
-    			var p = row.find('.project');
-    			var j = 0;
-    			fadeIn(p, j);
-        	}, 500)
-        }
+          $timeout(function() {
+            var projectsContainer = element.find('.side-projects-container');
+            var row = projectsContainer.find('.row');
+            var p = projectsContainer.find('.project');
+
+            if (AppManager.getViewPort()) {
+              for (var i = 0; i < p.length; ++i) {
+                p.eq(i).css('opacity', '1');
+              }
+            } else {
+              fadeIn(p, 0);
+            }
+          }, 500);
+        };
 
         $scope.service.getSideProjectsJSON(2, function(data){
         	$scope.sideProjectsJSON = data;

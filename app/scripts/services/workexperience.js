@@ -54,7 +54,7 @@ angular.module('jcedevelopApp')
     	};
 
     	this.getRndSeq = function(){
-    		return [0, 3, 2, 1];
+    		return [0, 3, 4, 5, 2, 1];
     	};
 
     	this.getToolKitJSON = function(){

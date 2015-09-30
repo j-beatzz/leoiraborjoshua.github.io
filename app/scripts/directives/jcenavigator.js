@@ -7,19 +7,20 @@
  * # jceNavigator
  */
 angular.module('jcedevelopApp')
-  .directive('jceNavigator', function () {
+  .directive('jceNavigator', function (AppManager) {
     return {
 	  templateUrl: 'views/jcenavigator.html',
 	  restrict: 'E',
 	  controller: 'jceNavigatorCtrl',
 	  link: function ($scope, element, attrs) {
 	  	$scope.jceBrand = 'LEO-Irabor Joshua';
+	  	$scope.isMobileMenu = false;
 	  	var setView = function(){
 	    	var width = $(window).width();
 	    	if (width <= 748){
-				$scope.isMobileView = true;	    	
+				AppManager.setViewPort(true);	    	
 	    	} else {
-	    		$scope.isMobileView = false;	    	
+	    		AppManager.setViewPort(false);
 	    	}
 
 	    	if(width <= 500){
@@ -28,6 +29,7 @@ angular.module('jcedevelopApp')
 	    		$scope.jceBrand = 'LEO-Irabor Joshua';
 	    	}
 
+	    	$scope.isMobileView = AppManager.getViewPort();
 	    };
 	    setView();
 
@@ -51,7 +53,6 @@ angular.module('jcedevelopApp')
 	    });
 	    $scope.activeSection = 0;
 	    $scope.activeType = 3;
-	    $scope.isMobile = false;
 		var topMenuHeight = element.outerHeight() + 15,
 			linkedIds = [],
 			lastId;

@@ -34,7 +34,7 @@ angular.module('jcedevelopApp')
 		$scope.menuItems[$scope.activeMenuItem].isActive = false;
 		$scope.menuItems[index].isActive = true;
 		$scope.activeMenuItem = index;
-		if($scope.isMobileView){
+		if(APP.isMobileView){
 			$scope.showDropDown = false;
 		}
 	};
