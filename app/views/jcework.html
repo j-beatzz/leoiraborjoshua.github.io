@@ -1,0 +1,14 @@
+<div class="experience-container">
+	<h2>My Work Experience</h2>
+	<div class="sub-container">
+		<div class="jce-experience-item" ng-repeat="experience in experienceJSON" id="experience-{{$index}}">
+			<h2>{{experience.company}}</h2>
+			<h3>{{experience.position}}</h3>
+			<ul ng-repeat="task in experience.tasks">
+			  <li>{{task}}</li>
+			</ul>
+		<div ng-init="$last && setVerticalLineHeight()"></div>
+		</div>
+	</div>
+</div>
+<div class="vert_line">

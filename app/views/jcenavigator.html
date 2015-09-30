@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default navbar-fixed-top jce-nav" role="navigation">
+  <div class="container-fluid">
+  	<div class="mobile-icon" ng-if="isMobileView" ng-click="menuIconClicked()" ng-class="{active1: (activeType === 1),
+      active2: (activeType === 2), 
+      active3: (activeType === 3)}"><h1><i class="fa fa-bars"></i></h1></div>
+    <ul class="nav navbar-nav navbar-left">
+      <li class="navbar-brand"><h2>{{jceBrand}}</h2></li>
+    </ul>
+    <ul ng-if="!isMobileView || showDropDown" class="nav navbar-nav navbar-right jce-menu">
+      <li ng-class="{active1: (item.isActive && item.activeType === 1),
+      active2: (item.isActive && item.activeType === 2), 
+      active3: (item.isActive && item.activeType === 3)}" 
+      ng-repeat="item in menuItems" ng-click="scrollTo($index, $event)">
+      	<a>{{item.title}}</a>
+      </li>
+  </ul>
+  </div>
+</nav>getActiveType

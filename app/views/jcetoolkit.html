@@ -1,0 +1,12 @@
+<div class="tool-kit-container">
+	<h2>My Tool Kit</h2>	
+	<div class="row" ng-repeat="row in toolKitJSON">
+		<div class="tool col-md-2 col-sm-2 col-xs-2" ng-repeat="tool in row">
+			<div class="tool-item" jce-hover color="{{tool.hightlightColor}}">
+				<h1><i class="{{tool.image}}"></i></h1>
+				<p>{{tool.skill}}</p>
+				<jce-proficiency-stars rating="{{tool.proficiency}}"></jce-proficiency-stars>
+			</div>
+		</div>
+	</div>
+</div>

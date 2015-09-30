@@ -1,0 +1,358 @@
+/* COLOR CODES 
+  header: #5C005C
+  main: #E6E6E6;
+  footer: #202020;
+  header-color: #F0E6F0;
+*/
+/* Space out content a bit */
+html {
+  transition : all 1s ease-in-out;
+}
+body {
+  width: 100%;
+  padding:0;
+  background-color: #202020;
+  overflow-x: hidden;
+}
+
+.jce-nav {
+  background-color: #5C005C;
+  padding: 0px;
+  margin-bottom: 0px;
+  border: none;
+}
+
+.jce-header {
+  background-color: #5C005C;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  color: #F0E6F0;
+}
+.jce-header > div {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: transparent;
+}
+.jce-dropdown-nav {
+  text-align: center;
+  height:20px;
+  padding:0;
+  margin:0;
+}
+.jce-no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.jce-transparent {
+  background: transparent;
+}
+.main-container {
+  margin-top: 0px;
+  position: relative;
+  z-index: 10;
+}
+#find-me {
+  background-color: #5C005C;
+  transition: margin-top 1s;
+  position: relative;
+  z-index: 1000;
+}
+.jce-description {
+  position: relative;
+  max-width: 400px;
+  min-width: 350px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.jce-profile-container {
+  width: 160px;
+  height: 200px;
+  position: relative;
+}
+.jce-profile-container img {
+  position: relative;
+  width: 100%;
+}
+.jce-desctiption-text{
+  position: relative;
+  text-align: left;
+  margin-top: -200px;
+  margin-left: 175px;
+  padding: 0px;
+}
+.jce-find-me-btn {
+  cursor: pointer;
+  color: #F0E6F0;
+  transition: font-size 0.25s;
+}
+.jce-find-me-btn:hover {
+  font-size: 18px;
+}
+.jce-shrink {
+  max-width: 850px;
+  min-height: 1000px;
+}
+.jce-shrink-lg {
+  max-width: 1000px;
+}
+#jce-work-experience {
+  background-color: #E6E6E6;
+  padding: 20px;
+}
+.jce-experience-item {
+  position: relative;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  background: #e5e5e5;
+  margin-bottom: 15px;
+  display: none;
+  text-align: left;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 15px;
+  transition: box-shadow 0.5s;
+}
+.jce-experience-item:hover {
+  box-shadow: 1px 1px 10px #808080;
+}
+
+.jce-experience-item h2 {
+  text-align: left !important;
+}
+.experience-container {
+  position: relative;
+  margin-top: 70px;
+  z-index: 2;
+}
+.experience-container h2 {
+  text-align: center;
+}
+.sub-container {
+  margin-top: 100px;
+  z-index: 2;
+}
+.tool-kit-container, .side-projects-container {
+  text-align: center;
+  background: #202020;
+  position:relative;
+  padding: 20px;
+  color: #CCCCCC;
+}
+.side-projects-container a {
+  color: #5C005C;
+}
+.project {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tool-kit-container h2 {
+  margin-top: 0px;
+}
+.tool-item {
+  transition: color 0.5s;
+  cursor: default;
+}
+.jce-company-logo-container {
+  position: absolute;
+  right: 0%;
+  top: 0px;
+  width: 80px;
+  padding: 5px;
+  background-color: #5C005C;
+  text-align: center;
+}
+.jce-company-logo-container img {
+  position: relative;
+  width: 100%;
+}
+/*.jce-menu a, .jce-menu a:hover  {
+  color: #F0E6F0;
+  font-weight: bold;
+  cursor: pointer;
+}*/
+.navbar-default .navbar-nav > li > a {
+  color: #F0E6F0;
+  cursor: pointer; 
+}
+.active1{
+  border-left: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  border-right: 1px solid #E7E7E7;
+  border-top: none;
+}
+.active2 {
+  background: #202020;
+}
+.active2 a, .active2 h1 {
+  color: #CCCCCC !important;
+}
+.active3 {
+  background-color: #E7E7E7;
+}
+.active3 a, .active3 h1 {
+  color: #555 !important;
+
+}
+/*Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.jce-footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-x: hidden;
+}
+
+.jce-footer {
+  z-index: 10;
+}
+.copyright {
+  margin-top: 50px;
+  border-top: 1px solid #E5E5E5;
+}
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.jce-footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.vert_line {
+  width: 4px;
+  height: inherit;
+  border-radius: 2px;
+  margin:auto;
+  background: #808080;
+  margin-top:0px;
+  position: absolute;
+  left: 49%;
+  right:49%;
+  top: 150px;
+  z-index: 0;
+  display: none;
+}
+.mobile-icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 10px;
+  right: 1%;
+  padding: 3px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.mobile-icon h1 {
+  padding: 0;
+  margin: 0;
+}
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  cursor: pointer;
+  color: #F0E6F0 !important;
+  padding: 5px;
+  padding-left: 15px;
+}
+.navbar-brand h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-brand:hover {
+  color: #F0E6F0 !important;
+
+}
+.ic_network, .ic_network a {
+  color: #751975;
+}
+.ic_network a:hover {
+  color: #E6E6E6;
+  text-decoration: none;
+}
+.col-md-6, .col-xs-6 {
+  min-width: 100px !important;
+}
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .jce-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  .social {
+      margin-left: 0px;
+      position:relative;
+  }
+  .mail {
+      margin-left: 0px;
+      position:relative;
+  }
+}
+@media screen and (max-width: 650px) {
+  .jce-description{
+    min-width: 100%;
+  }
+
+  .jce-desctiption-text {
+    padding: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .jce-profile-container {
+    margin: auto;
+  }
+}
