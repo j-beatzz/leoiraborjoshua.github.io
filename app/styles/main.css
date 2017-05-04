@@ -1,4 +1,4 @@
-/* COLOR CODES 
+/* COLOR CODES
   header: #5C005C
   main: #E6E6E6;
   footer: #202020;
@@ -120,6 +120,13 @@ body {
 .jce-experience-item h2 {
   text-align: left !important;
 }
+
+.jce-experience-item sub {
+  font-size: 15px;
+  margin-left: 9px;
+  top: -1px;
+  color: #737373;
+}
 .experience-container {
   position: relative;
   margin-top: 70px;
@@ -173,7 +180,7 @@ body {
 }*/
 .navbar-default .navbar-nav > li > a {
   color: #F0E6F0;
-  cursor: pointer; 
+  cursor: pointer;
 }
 .active1{
   border-left: 1px solid #E7E7E7;

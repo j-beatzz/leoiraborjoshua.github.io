@@ -8,12 +8,12 @@
  * Controller of the jcedevelopApp
  */
 angular.module('jcedevelopApp')
-  .controller('jceNavigatorCtrl', function ($scope, $location, $anchorScroll, $timeout) {
-    $scope.scrollTo = function(index, $event){
+  .controller('jceNavigatorCtrl', function ($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(index){
     	var old = $location.hash();
     	$location.hash($scope.menuItems[index].linkedId);
-    	$anchorScroll();  
-    	$location.hash(old);  		
+    	$anchorScroll();
+    	$location.hash(old);
     	$scope.setActive(index);
     	// if(index === 0){
     	// 	if(!$scope.findMeIsOpen){
@@ -24,6 +24,7 @@ angular.module('jcedevelopApp')
     	// 	}
     	// }
     };
+
     $scope.showDropDown = false;
 
     $scope.menuIconClicked = function() {
@@ -34,7 +35,7 @@ angular.module('jcedevelopApp')
 		$scope.menuItems[$scope.activeMenuItem].isActive = false;
 		$scope.menuItems[index].isActive = true;
 		$scope.activeMenuItem = index;
-		if(APP.isMobileView){
+		if(window.APP.isMobileView){
 			$scope.showDropDown = false;
 		}
 	};

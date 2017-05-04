@@ -2,7 +2,7 @@
 	<h2>My Work Experience</h2>
 	<div class="sub-container">
 		<div class="jce-experience-item" ng-repeat="experience in experienceJSON" id="experience-{{$index}}">
-			<h2>{{experience.company}}</h2>
+			<h2>{{experience.company}}<sub>{{experience.location}}</sub></h2>
 			<h3>{{experience.position}}</h3>
 			<ul ng-repeat="task in experience.tasks">
 			  <li>{{task}}</li>
