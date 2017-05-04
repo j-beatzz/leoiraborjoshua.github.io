@@ -1,0 +1,26 @@
+# Put on Rewrite Engine
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
+    RewriteEngine On
+  # RewriteBase /
+</IfModule>
+
+# remove http frrom requests
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+
+# Angularjs Magic to redirect every request to index.html
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule !^server($|/) /index.html [NC,L]
+</IfModule>
